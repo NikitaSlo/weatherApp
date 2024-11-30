@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <section class="card">
+            <div class="search-bar">
+                <input type="text" placeholder="Enter city name" spellcheck="false" aria-label="Enter city name" id="city-input">
+                <button aria-label="Search city" id="search-btn"><i class="fa fa-search-location"></i></button>
+            </div>
+        </section>
+        
+        <section class="weather">
+
+            <div class="weather-main" aria-live="polite">
+                <div class="city-info main">
+                    <h1 class="temp">-- °C</h1>
+                    <h2 class="city">City</h2>
+                </div>
+                
+                <div class="weather-info">
+                    <div class="main info">
+                        <p class="info-text">Humidity: <span id="humidity-value">--</span>%</p>
+                        <p class="info-text">Wind Speed: <span id="wind-value">--</span> km/s</p>
+                    </div>
+    
+                    <div class="expand">
+                        <p class="see-more">More info</p>
+                        <button aria-label="Open / Close additional info">
+                            <i class="fa-solid fa-arrow-right open"></i>
+                            <i class="fa-solid fa-xmark close hidden"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+                <div class="weather-add" id="weather-add">
+                    <div class="add-info pressure">
+                        <i class="fa-solid fa-cloud"></i>
+                        <p class="info-text">Pressure: <span id="pressure-value">--</span>hPa</p>
+                    </div>
+                    <div class="add-info visibility">
+                        <i class="fa-solid fa-cloud"></i>
+                        <p class="info-text">Visibility: <span id="visibility-value">--</span>%</p>
+                    </div>
+                    <div class="add-info precipitation">
+                        <i class="fa-solid fa-cloud"></i>
+                        <p class="info-text">Precipitation: <span id="precipitation-value">--</span>mm/day</p>
+                    </div>
+
+                </div>
+        </section>
+        
+        <div class="loadingScreen" id="loading-spinner"></div>
+        
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; 2024 Solomin's Weather App. All Rights Reserved.</p>
+        <p class="credit">Created in association with Sempai.</p>
+    </footer>
+
+    <script src="./js/buttonAnimation.js"></script>
+    <script src="./js/api/backgroundSearch.js"></script>
+    <script src="./js/api/weatherInfo.js"></script>
+</body>
+
+</html>
