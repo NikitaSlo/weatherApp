@@ -29,3 +29,4 @@ document.querySelector(".expand button").addEventListener("click", function () {
 
     isOpen = !isOpen;
 });
+
